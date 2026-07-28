@@ -6,16 +6,19 @@ import vue from '@vitejs/plugin-vue'
 import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vite.dev/config/
-export default defineConfig({
+export default defineConfig(({ command }) => {
+  return {
     plugins: [
         vue(),
         vueDevTools(),
         tailwindcss(),
     ],
-    base: '/rustam_project_demo_list/', 
+    // Если идет сборка (build), задаем имя репозитория, иначе — корень
+    base: command === 'build' ? '/rustam_project_demo_list/' : '/',
     resolve: {
         alias: {
             '@': fileURLToPath(new URL('./src', import.meta.url)),
         },
     },
+  }
 })
