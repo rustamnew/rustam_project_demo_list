@@ -1,6 +1,8 @@
 <template>
-    <div class="project-list bg-theme-primary text-white">
-        <h2 class="text-4xl font-bold text-center mb-16">Мои проекты</h2>
+    <div class="project-list bg-theme-primary text-white relative">
+        <h2 class="text-4xl font-bold text-center absolute top-2 left-0 right-0">Мои проекты</h2>
+
+        <ContactsPanel />
 
         <div ref="containerRef" class="scroll-container">
 
@@ -8,9 +10,12 @@
             <section v-for="(project, index) in projects" :key="index" class="panel" ref="sectionRefs"
                 :style="index === 0 ? { scale: 1 } : undefined">
 
-                <ProjectCard :project="project" />
+                <ProjectCard :project="project" @open-modal="openCardModal" />
             </section>
         </div>
+
+        <ProjectModal v-if="modalOpened" @close-modal="closeCardModal" :github="modalProject?.github"
+            :deploy="modalProject?.deploy" />
     </div>
 
 </template>
@@ -20,14 +25,20 @@ import { ref, onMounted, onUnmounted } from 'vue'
 import { gsap } from 'gsap'
 import { Observer } from 'gsap/Observer'
 
+import ContactsPanel from './ContactsPanel.vue'
 import ProjectCard from './ProjectCard.vue'
 import projectsData from '@/data/projects.json'
+import ProjectModal from './ProjectModal.vue'
+
 
 gsap.registerPlugin(Observer)
 
 const projects = ref(projectsData)
 const containerRef = ref(null)
 const sectionRefs = ref([])
+
+const modalOpened = ref(false)
+const modalProject = ref(null)
 
 let currentIndex = 0
 let isAnimating = false
@@ -63,6 +74,8 @@ const goToSection = (targetIndex, animationDuration = 0.8) => {
                 duration: animationDuration,
                 ease: 'power2.out',
             })
+
+            projects.value[index].active = true
         } else {
             const diff = targetIndex - index
 
@@ -72,8 +85,19 @@ const goToSection = (targetIndex, animationDuration = 0.8) => {
                 duration: animationDuration,
                 ease: 'power2.out',
             })
+
+            projects.value[index].active = false
         }
     })
+}
+
+const openCardModal = (project) => {
+    modalProject.value = project
+    modalOpened.value = true
+}
+
+const closeCardModal = () => {
+    modalOpened.value = false
 }
 
 
@@ -113,17 +137,6 @@ onUnmounted(() => {
 </script>
 
 <style scoped lang="scss">
-.project-list {
-    position: relative;
-
-    h2 {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-    }
-}
-
 .scroll-container {
     width: 100%;
     height: 100vh;
