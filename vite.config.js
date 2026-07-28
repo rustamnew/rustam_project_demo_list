@@ -12,6 +12,7 @@ export default defineConfig({
         vueDevTools(),
         tailwindcss(),
     ],
+    base: '/rustam_project_demo_list/', 
     resolve: {
         alias: {
             '@': fileURLToPath(new URL('./src', import.meta.url)),
