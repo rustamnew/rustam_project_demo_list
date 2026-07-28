@@ -8,6 +8,10 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
 
     steps:
       - name: Checkout repository
@@ -24,6 +28,9 @@ jobs:
       - name: Build production app
         run: npm run build
 
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v2
+
       - name: Upload artifact for GitHub Pages
         uses: actions/upload-pages-artifact@v1
         with:
@@ -32,15 +39,10 @@ jobs:
   deploy:
     needs: build-and-deploy
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.page_url.outputs.url }}
+    permissions:
+      pages: write
+      contents: read
 
     steps:
       - name: Deploy to GitHub Pages
-        id: deploy
         uses: actions/deploy-pages@v1
-
-      - name: Get page URL
-        id: page_url
-        run: echo "url=https://$GITHUB_REPOSITORY.github.io" >> $GITHUB_OUTPUT
