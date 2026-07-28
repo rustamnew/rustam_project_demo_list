@@ -1,0 +1,62 @@
+﻿[
+    {
+        "id": 1,
+        "title": "Real-time Dashboard",
+        "stack": "Vue 3, Leaflet",
+        "desc": "Дашборд с картой и real-time данными",
+        "color": "from-blue-500 to-cyan-500",
+        "image": "/screenshots/example",
+        "github": "https://github.com/rustamnew/rustam_project_node",
+        "deploy": "http://localhost:5173/"
+    },
+    {
+        "id": 2,
+        "title": "High-Performance Table",
+        "stack": "React, react-window",
+        "desc": "Виртуализованный список на 10k+ строк",
+        "color": "from-purple-500 to-pink-500",
+        "image": "/screenshots/example",
+        "github": "https://github.com/rustamnew/rustam_project_node",
+        "deploy": "http://localhost:5173/"
+    },
+    {
+        "id": 3,
+        "title": "Booking API",
+        "stack": "PHP, Symfony, RabbitMQ",
+        "desc": "REST API с оптимизацией SQL-запросов",
+        "color": "from-orange-500 to-red-500",
+        "image": "/screenshots/example",
+        "github": "https://github.com/rustamnew/rustam_project_node",
+        "deploy": "http://localhost:5173/"
+    },
+    {
+        "id": 4,
+        "title": "Notification Service",
+        "stack": "Node.js, NestJS",
+        "desc": "Микросервис для обработки вебхуков",
+        "color": "from-green-500 to-emerald-500",
+        "image": "/screenshots/example",
+        "github": "https://github.com/rustamnew/rustam_project_node",
+        "deploy": "http://localhost:5173/"
+    },
+    {
+        "id": 5,
+        "title": "E-commerce Platform",
+        "stack": "Next.js, Tailwind CSS",
+        "desc": "Платформа с кастомной корзиной и оплатой",
+        "color": "from-yellow-500 to-amber-500",
+        "image": "/screenshots/example",
+        "github": "https://github.com/rustamnew/rustam_project_node",
+        "deploy": "http://localhost:5173/"
+    },
+    {
+        "id": 6,
+        "title": "Analytics Dashboard",
+        "stack": "Angular, D3.js",
+        "desc": "Дашборд с интерактивными графиками и диаграммами",
+        "color": "from-indigo-500 to-violet-500",
+        "image": "/screenshots/example",
+        "github": "https://github.com/rustamnew/rustam_project_node",
+        "deploy": "http://localhost:5173/"
+    }
+]

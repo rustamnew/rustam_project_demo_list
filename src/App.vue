@@ -1,11 +1,22 @@
-<script setup></script>
+<script setup>
+import ProjectList from './components/ProjectList.vue'
+
+</script>
 
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+    <!-- <div class="main"> -->
+    <ProjectList />
+    <!-- </div> -->
 </template>
 
-<style scoped></style>
+<style scoped>
+.main {
+    /* background-color: #190733;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    height: 100vh;*/
+}
+</style>
