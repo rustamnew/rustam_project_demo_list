@@ -6,8 +6,8 @@
         "desc": "Дашборд с картой и real-time данными",
         "color": "from-blue-500 to-cyan-500",
         "image": "/screenshots/example",
-        "github": "https://github.com/rustamnew/rustam_project_node",
-        "deploy": "http://localhost:5173/"
+        "github": "https://github.com/rustamnew/rustam_project_demo_list",
+        "deploy": "https://rustamnew.github.io/rustam_project_demo_list"
     },
     {
         "id": 2,
@@ -16,8 +16,8 @@
         "desc": "Виртуализованный список на 10k+ строк",
         "color": "from-purple-500 to-pink-500",
         "image": "/screenshots/example",
-        "github": "https://github.com/rustamnew/rustam_project_node",
-        "deploy": "http://localhost:5173/"
+        "github": "https://github.com/rustamnew/rustam_project_demo_list",
+        "deploy": "https://rustamnew.github.io/rustam_project_demo_list"
     },
     {
         "id": 3,
@@ -26,8 +26,8 @@
         "desc": "REST API с оптимизацией SQL-запросов",
         "color": "from-orange-500 to-red-500",
         "image": "/screenshots/example",
-        "github": "https://github.com/rustamnew/rustam_project_node",
-        "deploy": "http://localhost:5173/"
+        "github": "https://github.com/rustamnew/rustam_project_demo_list",
+        "deploy": "https://rustamnew.github.io/rustam_project_demo_list"
     },
     {
         "id": 4,
@@ -36,8 +36,8 @@
         "desc": "Микросервис для обработки вебхуков",
         "color": "from-green-500 to-emerald-500",
         "image": "/screenshots/example",
-        "github": "https://github.com/rustamnew/rustam_project_node",
-        "deploy": "http://localhost:5173/"
+        "github": "https://github.com/rustamnew/rustam_project_demo_list",
+        "deploy": "https://rustamnew.github.io/rustam_project_demo_list"
     },
     {
         "id": 5,
@@ -46,8 +46,8 @@
         "desc": "Платформа с кастомной корзиной и оплатой",
         "color": "from-yellow-500 to-amber-500",
         "image": "/screenshots/example",
-        "github": "https://github.com/rustamnew/rustam_project_node",
-        "deploy": "http://localhost:5173/"
+        "github": "https://github.com/rustamnew/rustam_project_demo_list",
+        "deploy": "https://rustamnew.github.io/rustam_project_demo_list"
     },
     {
         "id": 6,
@@ -56,7 +56,7 @@
         "desc": "Дашборд с интерактивными графиками и диаграммами",
         "color": "from-indigo-500 to-violet-500",
         "image": "/screenshots/example",
-        "github": "https://github.com/rustamnew/rustam_project_node",
-        "deploy": "http://localhost:5173/"
+        "github": "https://github.com/rustamnew/rustam_project_demo_list",
+        "deploy": "https://rustamnew.github.io/rustam_project_demo_list"
     }
 ]
